@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 연습</title>
+    <style type="text/css">
+        /*1번*/
+        h1{background-color: pink;}
+
+        /*2번*/
+        #a{color: red;}
+        #a{color: skyblue;}
+
+        /*3번*/
+        .b{
+            color: blue;
+        }
+
+        /*4번*/
+        *{
+            padding: 2px;
+        }
+        /* 선택자 중 가장 우선 순위가 낮지만, 상위 우선 순위 선택자들 중 겹치는 스타일 내용만 없으면 전체 적용된다.*/
+
+        /*5번*/
+        p > strong{color: orange;}
+
+        p strong{color: aqua;}
+
+        /*6번*/
+        #c + p{color: green;}
+
+        /*7번*/
+        p[title]{font-size: 20pt;}
+        /* 속성 값까지 적으면, 해당 속성과 해당 속성 값까지 가진 요소들에만 스타일 적용한다.*/
+
+        /*번외*/
+        #d > p{
+            color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><b>셀렉터</b> 연습</h1>
+    <div>
+        <p>1. h1태그에 배경색 pink 적용하기</p>
+        <p id="a">2. id a를선택해 <b>color:red</b>로 적용하기</p>
+        <p class="b">3. class 선택해 <b>color:blue</b>로 적용하기</p>
+    </div>
+
+    <div>
+        <p>4. 전체를 선택해 <b>padding:2px</b>로 적용하기</p>
+        <p>5. p태그의 <strong>자식요소</strong> 중 strong tag에 <b>color:orange</b>로 적용하기 <strong>세컨드 스트롱</strong></p>
+        <p id="c">6. id가 c인 속성을 가진 p태그에 인접한 p태그에 <b>color:green</b> 적용하기</p>
+        <!-- <h4>다음 p태그 사이 장애물 있으면?? 적용 안된다.</h4> -->
+        <p title="mytt">7.title 속성을 가진 p태그에 font-size 20pt로 적용하기</p>
+        <p title>7. title 속성 여러개면 여러개 다 적용될까?</p>
+        <!-- 인접 선택자는 해당 요소가 여러개 와도 바로 뒤에 붙는 하나만 적용한다. -->
+    </div>
+    
+    <div id="d">
+        <p>자식 선택자로 자식들 전체 적용?</p>
+        <p>자식 선택자로 자식들 전체 적용??</p>
+        <p>자식 선택자로 자식들 전체 적용????</p>
+        <h4>중간에 장애물</h4>
+        <p>자식 선택자로 자식들 전체 적용???????</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
