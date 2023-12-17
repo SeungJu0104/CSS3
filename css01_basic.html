@@ -1,0 +1,72 @@
+<!--
+CSS (Cascading Style Sheets)
+: 글꼴, 색상, 크기 등을 변경하거나 위치, 애니메이션 등 기타 기능 추가해준다.
+: 특정 태그들에게 스타일 효과를 적용하는 언어
+: 브라우저 웹페이지에서 보이는 외형을 설정해준다.
+: 종속형 스타일 시트
+
+기본 작성 방식
+1) 인라인 스타일 시트
+: 태그 내에 작성한다.
+
+2) 내부 스타일 시트
+: html 파일 내에서 작성한다.
+: <태그명 type = "text/css"> 변경할 태그명 {} .클래스명 {} #해당 태그 id명 {} </태그명>
+
+3) 외부 스타일 시트
+: html 파일 외부에서 작성한다.
+: 파일 자체가 하나의 스타일 시트이다.
+: link 태그의 href 속성을 이용해 외부 파일을 참조한다.
+: <link href = "CSS 파일 위치" rel = "연결 대상의 속성(stylesheet)" type = "파일의 정보 값(text/css)">
+(text/css ===> 'text로 이루어져 있고, CSS 기능을 한다.' 는 의미를 갖고 있다.)
+
+단, 같은 태그에 여러 방식으로 스타일을 적용할 경우, 가장 우선 순위가 높은 스타일을 적용한다.
+(인라인 스타일 시트 ==> 내부 스타일 시트 ==> 외부 스타일 시트)
+(일반적으로 현업에서는 외부 스타일 시트를 가장 많이 사용한다.)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <style type="text/css">
+        #a{
+            color: coral;
+        }
+    </style>
+    <link href="./../Resources/css01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h3>CSS 기본 작성 방식 3가지</h3>
+    <p>1. 인라인 스타일 시트</p>
+    <b style="color: red;">태그 내에서 스타일 지정</b>
+
+    <p id="a">2. 내부 스타일 시트
+        <br>
+        <span> html 파일 내부에서 작성한다.</span>
+    </p>
+
+    <p>3. 외부 스타일 시트</p>
+    <b>html 파일 외부에 css파일을 작성한다.</b>
+    <!-- b 태그가 2개 있는데, 인라인 스타일 시트가 외부 스타일 시트보다
+    우선 순위가 높기 때문에 앞에 있는 b태그에는 인라인 스타일 시트 내용이 적용되고,
+    아래 있는 b태그에 외부 스타일 시트 내용이 적용된다.-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
