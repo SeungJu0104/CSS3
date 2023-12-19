@@ -1,0 +1,88 @@
+<!--
+clear
+: float을 한 요소 다음에 오는 요소가 따라 붙지 않게 하기 위해 사용하는 속성
+(both => 좌측, 우측 모두 float 하고 남는 공간 자체에 붙는다.)
+(left => 왼쪽의 float 후 남는 공간에 붙는다.)
+(right => 오른쪽의 float 후 남는 공간에 붙는다.)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #wrapper{
+            width: 600px;
+            /* 너비에 고정 값 줘서 viewport 변동해도 바뀌지 않는다. */
+            border: 1px dotted red;
+        }
+        #w01{
+            width: 200px;
+            /* 너비에 고정 값 줘서 viewport 변동해도 바뀌지 않는다. */
+            padding: 15px;
+            background-color: gray;
+            float: left;
+        }
+        /* w02가 블록 요소이기 때문에(w02에 float 안줬다고 가정) w01에 float을 줘도 올라올 수 없다. */
+        /* 블록요소는 한 영역을 다 차지해야하기 때문이다. */
+        #w02{
+            width: 200px;
+            padding: 15px;
+            background-color: pink;
+            float: right;
+        }
+        #w03{
+            /*width: 200px;*/
+            /* 너비에 고정 값 줘서 viewport 변동해도 바뀌지 않는다. */
+            padding: 15px;
+            background-color: aqua;
+            clear: left;
+        }
+        /* 따로 clear주지 않으면 float 적용된 w01과 w02 사이에 w03이 들어간다. */
+        /* clear : left; 했기 때문에 왼쪽 float하고 남는 공간에 붙는다. */
+    </style>
+</head>
+<body>
+<!--(body에 너비, 높이 값을 따로 주지 않으면 viewport의 크기에 따라 가변적으로 변동한다.)-->
+    <h1>네이마르 인대 파열 부상</h1>
+    <div id="wrapper">
+        <div id="w01">
+            네이마르는 지난 18일 우루과이와의 2026 북중미 월드컵 남미 예선 경기에서 
+            전방십자인대와 무릎 반월판 연골이 손상되는 부상을 입었다.
+        </div>
+        <div id="w02">
+            브라질 축구연맹은 19일 공식 홈페이지를 통해 
+            "네이마르의 부상에 대한 공식 업데이트"라며 네이마르 부상 소식을 전했다.
+        </div>
+        <div id="w03">
+            알힐랄은 지난 8월 파리 생제르맹에서 네이마르를 영입했다.
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
