@@ -1,0 +1,87 @@
+<!--
+box의 구조
+margin
+: border 기준 바깥 여백
+: 요소명 {margin [뱡향]: 값;}
+(기본적으로 상하좌우에 다 여백을 준다.)
+([]부분은 생략 가능하다.)
+
+padding
+: border 기준 안쪽 여백
+: 요소명 {padding [뱡향]: 값;}
+(기본적으로 상하좌우에 다 여백을 준다.)
+([]부분은 생략 가능하다.)
+
+border
+: 경계선
+: 요소명 {border [뱡향]: 값;}
+(기본적으로 상하좌우 전부 다 적용된다.)
+(border의 경계선은 padding 영역 밖에 그어진다.)
+([]부분은 생략 가능하다.)
+
+content
+: 실제 내용이 적히는 영역
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box 모델</title>
+    <style type="text/css">
+        dl,dd,dt,p{margin: 0px; padding: 0px;}
+        .box{/*dl 태그에 적용된다*/
+            width: 600px;
+            border: 3px double navy;
+            margin: 50px;
+        }
+        dt{
+            background-color: skyblue;
+            text-align: center;
+            font-size: 25pt;
+            letter-spacing: 20px;
+            /* letter-spacing : 자간 변경 */
+            padding: 15px;
+            border-bottom: navy 5px double;
+        }
+        dd{
+            padding: 10px;
+        }
+        .line{
+            border-bottom: 5px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <dl class="box">
+        <dt>28회차</dt>
+        <dd class="line">
+            <h2>10월 20일 금요일</h2>
+            <p>CSS 수업</p>
+        </dd>
+        <dd>
+            <h2>10월 21일 토요일</h2>
+            <p>집</p>
+        </dd>
+    </dl>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

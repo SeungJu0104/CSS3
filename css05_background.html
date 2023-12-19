@@ -1,0 +1,90 @@
+<!--
+background 속성
+
+background-image : url("파일 위치");
+: url 속성의 파일 위치에 있는 이미지를 화면 배경에 넣는다.
+: 기본적으로 반복되어서 나온다.
+
+background-size : 숫자px 또는 %;
+: 배경 사이즈 조절
+
+background-repeat : 설정값;
+: 배경 반복 설정
+: 설정 값에 no-repeat 넣으면 반복 안한다.
+
+background-attachment : 설정값;
+: 배경이 스크롤과 같이 움직이는지 배경은 배경대로 놓고, 스크롤은 별개로 움직일지 정하는 설정
+: 배경과 viewport가 같이 움직일지 별개로 움직일지 정한다.
+: 설정값을 fixed로 하면 배경과 viewport가 별개로 움직인다.
+
+background-position : 설정값;
+: 화면에서 배경의 위치 설정
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docu</title>
+    <style type="text/css">
+        h1{
+            background-image: url("./../sample/image/img03.png");
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* 배경이미지 넣고 fixed하면 배경 이미지와 화면이 같이 움직이지 않는다. */
+        }
+
+        pre{
+            background-image: url("../sample/image/img02.png");
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    </style>
+</head>
+<body>
+    <h1>네이마르 인대 파열 부상, FIFA 보상금 고작 100억…총급여 4500억인데!</h1>
+    <pre>
+        네이마르는 지난 18일 우루과이와의 2026 북중미 월드컵 남미 예선 경기에서 
+        전방십자인대와 무릎 반월판 연골이 손상되는 부상을 입었다. 
+        당시 경기에서 네이마르는 전반 종료 직전 볼을 몰고 가다가 상대 선수와의 경합에서 부딪혔다. 
+        이후 그라운드에 발을 디뎠으나 휘청이며 넘어졌다. 들것에 실려나가며 두 손으로 눈 부위를 가리는 등 
+        스스로 큰 부상임을 직감했던 네이마르는 실제로 결국 수술을 받아야 하는 신세에 놓였다.
+
+        브라질 축구연맹은 19일 공식 홈페이지를 통해 
+        "네이마르의 부상에 대한 공식 업데이트"라며 네이마르 부상 소식을 전했다. 
+        브라질은 "네이마르는 MRI 검사 결과 왼쪽 무릎 전방 십자인대와 반월판이 파열된 것으로 확인됐다. 
+        그는 부상을 위해 수술을 받게 될 것이며, 대표팀은 그의 회복을 위해 의료팀과 협력 중이다"라며 
+        네이마르의 부상 상태에 대해 설명했다.
+
+        알힐랄은 지난 8월 파리 생제르맹에서 네이마르를 영입했다. 
+        이적료는 9000만 유로(약 1292억원)에 달하며 
+        계약기간 2년 동안 지급해야 하는 총 연봉은 무려 2억7600만 파운드(약 4554억원)다. 
+        FIFA가 지급할 보상금 800만 유로는 이적료나 연봉에 비하면 턱없이 부족한 액수다.
+    </pre>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
