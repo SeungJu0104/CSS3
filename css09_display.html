@@ -1,0 +1,66 @@
+<!-- 
+display
+: 화면의 레이아웃을 결정하는 중요한 속성
+(기본 값은 block, inline)
+(그 외에 none, inline-block이 있다.)
+
+block => 앞 뒤로 줄 바꿈
+inline => 줄 바꿈 없다.
+none => 숨기기
+inline-block => 줄 바꿈 없고, 크기변경 가능하다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style type="text/css">
+        div{
+            display: inline;
+        }
+        /* 단순히 div 태그만 Inline으로 바꾼다고 화면에서 Inline 처럼 나오지 않는다. */
+        /* 왜냐하면 여기서는 div 태그 안에 블록 요소인 p태그가 남아있기 때문이다. */
+        p{
+            display: inline-block;
+            /*float: left;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>제목</h1>
+        <div id="menu1">
+            <p><a href="">메뉴1</a></p>
+        </div>
+        <div id="menu2">
+            <p><a href="">메뉴2</a></p>
+        </div>
+        <div id="menu3">
+            <p><a href="">메뉴3</a></p>
+        </div>
+        <div id="menu4">
+            <p><a href="">메뉴4</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
