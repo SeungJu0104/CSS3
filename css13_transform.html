@@ -1,0 +1,142 @@
+<!--
+Transform
+: 기울이는 등 뭔가 변형하는 작업들
+
+Transform 하위 속성
+translate 
+: 위치 이동
+: transform : translate(x축 이동 크기, y축 이동 크기);
+position의 relative는 자기자신 위치에서 지정 값만큼 추가 또는 감소하며 이동하고,
+translate는 지정한 x축, y축 지점으로 이동한다.
+(예를 들어 position의 relative는 30px 주고 원래 위치 오려면 -30px 줘야하지만,
+translate는 원래 위치 다시 적어주면 된다.)
+
+rotate
+: 회전
+: transform : roatate(회전 각도 수deg);
+(deg 안쓰면 회전 안한다.)
+
+scale
+: 배율 변형
+: transform : scale(x축 배율, y축 배율);
+(()안에 배율 하나만 쓰면, x축과 y축 모두 해당 배율이 적용된다.)
+
+transition
+: 일정시간동안 특정 요소 설정을 자연스럽게 변형
+: transition : 변경할 요소명 시간 [linear 등];
+([]부분은 생략 가능)
+(linear는 해당 시간동안 모든 과정을 일정시간으로 나눠 진행하도록 한다.)
+
+cursor
+: 커서 모양을 변경
+: cursor : 변경할 모양;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style type="text/css">
+        .transform{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            font-size: 30pt;
+        }
+        #tlate{
+            transform: translate(500px,50px);
+        }
+        #trotate{
+            transform: rotate(120deg);
+        }
+        #tscale{
+            transform: scale(0.5,1.5);
+        }
+        #transition{
+            transition: width 0.5s, background 1.5s transform 1.5s;
+        }
+        /* transition 설정 안하면 바로 바뀌고, 설정 주면 해당 시간동안 변경되는 요소들을 천천히 변경시킨다. */
+        #transition:hover{
+            width: 800px;
+            background-color: blue;
+            transform: translate(300px,0px);
+        }
+        li{
+            width: 250px;
+            background-color: pink;
+            margin: 5px;
+            padding-left: 5px;
+            font-size: 30pt;
+            font-weight: bold;
+            list-style-type: none;
+            transition: width 0.5s linear, color 0.5s linear, letter-spacing 0.5s;
+            /* linear는 해당 시간동안 모든 과정을 일정시간으로 나눠 진행하도록 한다. */
+            cursor: pointer;
+            /* 커서를 포인터 모양으로 변경 */
+        }
+        li:hover{
+            width: 800px;
+            color: blue;
+            letter-spacing: 5px;
+            
+        }   
+        /* transition은 li:hover에 적용해도 똑같이 화면에 나온다. */
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <hr>
+    <h2>transform - translate </h2>
+    <div id="tlate" class="transform">
+        translate : 위치이동
+    </div>
+
+    <h2>transform - rotate</h2>
+    <div id="trotate" class="transform">
+        rotate : 회전
+    </div>
+
+    <h2>transform - scale</h2>
+    <div id="tscale" class="transform">
+        scale : 크기
+    </div>
+
+    <h2>transition</h2>
+    <div id="transition" class="transform">
+        transition
+    </div>
+
+    <div>
+        <h2>Menu</h2>
+        <ul>
+            <li>Java</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
