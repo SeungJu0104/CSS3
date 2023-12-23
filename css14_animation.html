@@ -1,0 +1,73 @@
+<!-- 
+animation
+: transition은 하나만 변형시키지만,
+animation은 여러개를 자연스럽게 변형시킬 수 있다.
+: animation을 사용하려면 언제 어떤 애니메이션이 적용될지를 정한
+keyframe을 정의해야한다.
+: animation : 키프레임명 애니메이션 시간 [infinite 등];
+(infinite하면 해당 애니메이션을 무한 반복한다.)
+
+keyframe 정의
+@keyframes 키프레임명{애니메이션 적용할 지점 숫자%{효과 적용 내용;}}
+
+word-wrap
+: 문장을 나누어 오버플로우 방지
+: word-wrap : 명령어;
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            font-size: 30pt;
+            word-wrap: break-word;
+            animation: mybox 2s;
+        }
+        @keyframes mybox{
+            0%{width: 150px; height: 150px; background-color: yellow;
+            transform: translate(10px,10px);}
+            50%{width: 250px; height: 250px; background-color: orange;
+            transform: translate(200px,200px);}
+            100%{width: 200px; height: 200px; background-color: red;
+            transform: translate(10px,10px);}
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation 효과</h1>
+    <div>animation</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
