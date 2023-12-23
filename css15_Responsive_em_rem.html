@@ -1,0 +1,69 @@
+<!-- 
+브라우저의 기본 폰트 사이즈는 16px로 세팅.
+
+em
+: 부모의 폰트사이즈를 기반으로 글자 크기를 정한다.
+: em 앞에 숫자 붙으면 숫자 * 부모 글꼴 크기한 결과 값이 화면상 나올 글꼴 크기가 된다.
+(글자 크기 이외에는 자신의 글자크기 기준으로 한다.)
+rem
+: 루트의 글자 크기 기준으로 글자 크기를 정한다.
+: rem 앞에 숫자 붙으면 숫자 * 루트의 글꼴 크기한 결과 값이 화면상 나올 글꼴 크기가 된다.
+(루트의 글꼴 크기는 별도 설정 없으면 html 태그의 폰트 사이즈(16px)를 의미한다.)
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em / rem</title>
+    <style type="text/css">
+        /* body{
+            font-size: 24px;
+        } */
+        .b{
+            font-size: 24px; 
+        }
+        .a{
+            width: 20em;
+            /* 20em하면 960(48*20)이 들어간다. */
+            /* em은 글자크기 이외 경우에는 자신의 글자크기를 기준으로 한다.
+                현재 2em이므로 자신의 글자크기는 48. 부모의 글자크기는 24 */
+            height: 200px;
+            background-color: hotpink;
+            display: inline-block;
+            font-size: 2em;
+            padding: 1rem;
+            margin: 1rem;
+            /* margin과 padding에 16(html 태그의 기본 글자 크기)씩 들어갔다. */
+            /* margin과 padding에 2em 줬다고 가정하면,
+                여기서는 48(24*2)씩 들어간다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="b">
+        <div class="a">
+            테스트
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
