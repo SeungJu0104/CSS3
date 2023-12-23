@@ -1,0 +1,80 @@
+<!-- 
+가변 레이아웃
+: 부모크기 기준으로 정한 %만큼 크기를 설정한다.
+(최상위부터 가변으로 하면, body크기(viewport)기준으로 한다.)
+
+box-sizing
+: 박스 사이즈 조절
+(border-box => border까지 포함해 정해진 크기에 맞춘다.)
+(content-box => 컨텐트 영역만 정해진 크기에 맞춘다.)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 레이아웃</title>
+    <style type="text/css">
+        .container{
+            width: 90%;
+            /* body 크기(viewport)의 90% */
+            margin: 0 auto;
+            /* margin 상하좌우 모두 0 */
+            text-align: center;
+        }
+        .header{
+            width: 100%;
+            /* container 클래스의 자식 클래스 */
+            /* 부모 기준으로 100% 크기. 여기서는 container 너비 전체 */
+            height: 100px;
+            background-color: hotpink;
+        }
+        .main{
+            width: 70%;
+            height: 350px;
+            background-color: aqua;
+            float: left;
+        }
+        .aside{
+            width: 30%;
+            height: 350px;
+            background-color: beige;
+            float: right;
+        }
+        .footer{
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: plum;
+        }
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="main">Main</div>
+        <div class="aside">Aside</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
