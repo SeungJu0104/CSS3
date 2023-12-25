@@ -1,0 +1,58 @@
+<!-- 
+가변형 이미지
+: 부모 기준으로 %를 이용해 부모 크기 기준 몇%로 설정할 수 있다.
+
+max-width : 값;
+: 가변이더라도 설정한 값이상 너비가 커지지 않도록, 너비의 최대값을 정한다.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변형 이미지</title>
+    <style type="text/css">
+        img{
+            /* 1. width값만 고정으로 줘도, 브라우저가 자동으로 원본 비율을 유지하려하기 때문에
+                자동적으로 height 값도 맞춰 변경된다. */
+            width : 200px;
+            /* 2. 부모 너비의 100%너비를 갖는다. 현재는 body가 부모이기때문에, viewport가 기준 값이 된다. */
+            width: 100%;
+            /* 가변형은 부모 기준에 맞추는데, 부모가 body이기 때문에
+                viewport의 기준에 맞춘다. */
+            /* 3. 가변이더라도 너비의 최대값 설정 */
+            max-width: 800px;
+            /* 부모 기준에 맞춰 커지다가, 너비가 800px이상 커지지 않도록 설정한다. */
+        }
+        div{
+            width: 50%;
+        }
+        /* 부모가 body이므로, 아무리 키워도 화면 전체 크기의 50%이상 넘지 않는다. */
+    </style>
+</head>
+<body>
+    <img src="../sample/image/img01.png">
+    <div>
+        <img src="../sample/image/img02.png">
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
