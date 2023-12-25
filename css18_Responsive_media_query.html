@@ -1,0 +1,84 @@
+<!-- 
+media query
+: 화면 크기에 따라 다른 CSS 스타일을 보여줄 수 있는 기능.
+: @media 미디어 타입 and (조건 관련 쿼리문){조건에 만족할 경우 적용할 CSS 스타일 내용}
+(screen => 화면 관련 미디어 타입)
+(기본적으로 화면 조건 설정할 때, 화면 크기는 margin까지 포함한 크기이다.)
+(화면 조건 설정할 때, 그냥 width로 작성하니 미디어 쿼리가 실행이 안된다.)
+
+외부 CSS파일로 미디어 쿼리 실행
+: <link href ~~~ media="미디어 타입 and (조건 관련 쿼리문)">
+: 해당 조건을 만족하면 외부 CSS파일의 스타일이 적용된다.
+
+
+
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <link href="../Resources/css03.css" rel="stylesheet" type="text/css"
+    media="screen and (max-width:840px)">
+    <style type="text/css">
+        img{
+            width: 200px;
+            height: 250px;
+        }
+        /* 화면의 최소 너비가 840이상일 때, 
+            이미지 태그의 너비를 400으로, 높이는 500으로 만든다. */
+        @media screen and (min-width: 840px){
+            /* (기본적으로 화면 조건 설정할 때, 화면 크기는 margin까지 포함한 크기이다.) */
+            img{
+                width: 400px;
+                height: 500px;
+            }
+        }
+        /* 화면의 크기가 1200이상일 때, 
+        이미지 크기를 600*750, 투명도(opacity)를 0.5로 만든다. */
+        @media screen and (min-width: 1200px){
+            /* (기본적으로 화면 조건 설정할 때, 화면 크기는 margin까지 포함한 크기이다.) */
+            /* (그래서 개발자도구에서 양쪽 margin이 합쳐서 16일 때(border, padding은 0),
+             컨텐트 영역 화면 크기가 1186이상 되니까 미디어 쿼리가 실행됐다.) 1186+14=1200*/
+            img{
+                width: 600px;
+                height: 750px;
+                opacity: 0.5;
+            }
+            
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="../sample/image/img02.png">
+    <div>
+        TEST
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
